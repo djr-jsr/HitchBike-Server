@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var app = express();
 app.use(bodyParser.json())
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
 
 var core = require('./routes/core');
 app.use('/',core);
